@@ -36,7 +36,22 @@ The project is organized into:
 - **Corridor:** (0.5–1.6) prevents extreme prices.  
 - Formula ensures fairness:
 
+ 
+##  File structure overview
 
-# #ERRORS I Recieved GET /favicon.ico HTTP/1.1" 404 Not Found
-"When you open your FastAPI app in a browser, the browser automatically makes requests:"
-"GET /favicon.ico → looking for a little icon to show on the tab"
+src/
+  ml/
+    simulate.py        # generate telematics trips (GPS/speed/brakes/night)
+    train_model.py     # fit monotonic model, save models/model.pkl
+  api/
+    app.py             # FastAPI app: /predict
+    pricing.py         # load model, predict risk, calculate premium
+    schemas.py         # Pydantic schemas
+  ui/
+    app_streamlit.py   # Streamlit dashboard
+data/                  # trips.csv (simulated)
+models/                # model.pkl
+docs/                  # (optional) notes.md, design.md
+.streamlit/config.toml # (optional) theme
+requirements.txt
+README.md
