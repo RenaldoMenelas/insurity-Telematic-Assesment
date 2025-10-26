@@ -43,7 +43,15 @@ st.markdown("""
 
 # ---------- Header ----------
 st.markdown('<div class="header-strip"><h2 style="margin:0;color:#111827;">Insurity-style Telematics Pricing</h2><p style="margin:6px 0 0 0;color:#6B7280;">Usage-based risk scoring → dynamic premium</p></div>', unsafe_allow_html=True)
-
+# ---------- Sidebar ---------
+with st.sidebar:
+    st.markdown("### 🚘 Defensive Driving Resources")
+    st.markdown("""
+    - [National Safety Council – Defensive Driving](https://www.nsc.org/road)
+    - [AAA – Defensive Driving Strategies](https://exchange.aaa.com/safety/driving-advice/defensive-driving-tips/)
+    - [RedCrossing organization.– Defensive Driving Awareness](https://redcrossing.github.io/Distracted-driving-awareness/index.html)
+    """)
+    st.info("Good driving habits = lower premiums 🚗💡")
 # ---------- Inputs ----------
 st.markdown('<div class="card">', unsafe_allow_html=True)
 st.subheader("Driver inputs")
