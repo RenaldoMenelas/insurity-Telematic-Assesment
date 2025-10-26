@@ -24,44 +24,34 @@ Proof-of-concept showing how telematics data can drive fairer, usage-based auto 
 - Dynamic premium calculation
 - Deterministic outputs (no random noise)
 
-## ⚙️ Run Locally
-1. Clone the repo
-- git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
-- cd Insurity-Telematics
-2. Create and activate a virtual environment
-  macOS / Linux
-- python3 -m venv venv 
-- source venv/bin/activate
-  Windows (PowerShell)
-- python3 -m venv venv
-.\venv\Scripts\Activate.ps1
-3. Install dependencies  
-- pip install -r requirements.txt
-- run python src/ml/simulate.py
-- run python src/ml/train_model.py
-- uvicorn src.api.app:app --reload
-4. Activate venv again in the new terminal
-source venv/bin/activate      # or .\venv\Scripts\Activate.ps1 on Windows
-streamlit run src/ui/app.py
+## ⚙️ Run Locally Clone the repoository
+1. ```git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git```
+2. ```cd Insurity-Telematics-Assesment```
+#  create and activate a virtual environment*
+  macOS / Linux <br>
+3. ```python3 -m venv venv``` <br> 
+4. ```source venv/bin/activate```
+  
+  Windows (PowerShell)<br>
+3. ```python3 -m venv venv```<br>
+4. ```.\venv\Scripts\Activate.ps1```
 
-<img width="1421" height="817" alt="Screenshot 2025-10-26 at 4 27 20 AM" src="https://github.com/user-attachments/assets/e5f2e66c-0f18-4c3a-8133-829ebc765657" />
+  Install dependencies  
+5. ```pip install -r requirements.txt```
+# create folder, simulate data, train data
+6.``` mkdir -p data``` <br>
+7. ```python3 src/ml/simulate.py```<br>
+8. ```python3 src/ml/train_model.py```
+# start backend Api
+9. ```uvicorn src.api.app:app --reload ```<br>
+10. Activate venv again in the new terminal
+11. ```source venv/bin/activate```  or ```.\venv\Scripts\Activate.ps1``` on Windows
+12. ```streamlit run src/ui/app_streamlit.py```
+
+<img width="1421" height="![Uploading Screenshot 2025-10-26 at 3.42.50 PM.png…]()
+817" alt="Screenshot 2025-10-26 at 4 27 20 AM" src="https://github.com/user-attachments/assets/e5f2e66c-0f18-4c3a-8133-829ebc765657" />
+
+<img width="1426" height="814" alt="Screenshot 2025-10-26 at 3 46 45 PM" src="https://github.com/user-attachments/assets/ffd7c71a-a0fc-40be-9b2d-573e689af0d4" />
 
 
-
-
-src/
-  ml/
-    simulate.py        # generate telematics trips (GPS/speed/brakes/night)
-    train_model.py     # fit monotonic model, save models/model.pkl
-  api/
-    app.py             # FastAPI app: /predict
-    pricing.py         # load model, predict risk, calculate premium
-    schemas.py         # Pydantic schemas
-  ui/
-    app_streamlit.py   # Streamlit dashboard
-data/                  # trips.csv (simulated)
-models/                # model.pkl
-docs/                  # (optional) notes.md, design.md
-.streamlit/config.toml # (optional) theme
-requirements.txt
 README.md
