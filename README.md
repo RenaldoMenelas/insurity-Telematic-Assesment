@@ -33,14 +33,14 @@ Proof-of-concept showing how telematics data can drive fairer, usage-based auto 
 - python3 -m venv venv 
 - source venv/bin/activate
   Windows (PowerShell)
-- python -m venv venv
+- python3 -m venv venv
 .\venv\Scripts\Activate.ps1
 3. Install dependencies  
 - pip install -r requirements.txt
 - run python src/ml/simulate.py
 - run python src/ml/train_model.py
 - uvicorn src.api.app:app --reload
-- # activate venv again in the new terminal
+4. Activate venv again in the new terminal
 source venv/bin/activate      # or .\venv\Scripts\Activate.ps1 on Windows
 streamlit run src/ui/app.py
 
