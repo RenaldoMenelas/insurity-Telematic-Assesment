@@ -49,7 +49,7 @@ with st.sidebar:
     st.markdown("""
     - [National Safety Council – Defensive Driving](https://www.nsc.org/road)
     - [AAA – Defensive Driving Strategies](https://exchange.aaa.com/safety/driving-advice/defensive-driving-tips/)
-    - [RedCrossing organization.– Defensive Driving Awareness](https://redcrossing.github.io/Distracted-driving-awareness/index.html)
+    - [Red Crossing organization.– Defensive Driving Awareness](https://redcrossing.github.io/Distracted-driving-awareness/index.html)
     """)
     st.info("Good driving habits = lower premiums 🚗💡")
 # ---------- Inputs ----------
