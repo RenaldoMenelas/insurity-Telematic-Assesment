@@ -29,17 +29,18 @@ Proof-of-concept showing how telematics data can drive fairer, usage-based auto 
 - git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
 - cd Insurity-Telematics
 - python3 -m venv venv 
-# macOS / Linux:
-source venv/bin/activate
-# Windows PowerShell:
+- source venv/bin/activate
 # .\venv\Scripts\Activate.ps1
 - pip install -r requirements.txt
--  run python src/ml/simulate.py
--  run python src/ml/train_model.py
+- run python src/ml/simulate.py
+- run python src/ml/train_model.py
 - uvicorn src.api.app:app --reload
 - # activate venv again in the new terminal
 source venv/bin/activate      # or .\venv\Scripts\Activate.ps1 on Windows
 streamlit run src/ui/app.py
+
+<img width="1421" height="817" alt="Screenshot 2025-10-26 at 4 27 20 AM" src="https://github.com/user-attachments/assets/e5f2e66c-0f18-4c3a-8133-829ebc765657" />
+
 
 
 
