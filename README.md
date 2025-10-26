@@ -24,6 +24,25 @@ Proof-of-concept showing how telematics data can drive fairer, usage-based auto 
 - Dynamic premium calculation
 - Deterministic outputs (no random noise)
 
+## Run Loacally
+
+- git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
+- cd Insurity-Telematics
+- python3 -m venv venv 
+# macOS / Linux:
+source venv/bin/activate
+# Windows PowerShell:
+# .\venv\Scripts\Activate.ps1
+- pip install -r requirements.txt
+-  run python src/ml/simulate.py
+-  run python src/ml/train_model.py
+- uvicorn src.api.app:app --reload
+- # activate venv again in the new terminal
+source venv/bin/activate      # or .\venv\Scripts\Activate.ps1 on Windows
+streamlit run src/ui/app.py
+
+
+
 src/
   ml/
     simulate.py        # generate telematics trips (GPS/speed/brakes/night)
