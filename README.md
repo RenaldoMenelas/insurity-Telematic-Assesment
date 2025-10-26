@@ -24,13 +24,18 @@ Proof-of-concept showing how telematics data can drive fairer, usage-based auto 
 - Dynamic premium calculation
 - Deterministic outputs (no random noise)
 
-## Run Locally
-
+## ⚙️ Run Locally
+1. Clone the repo
 - git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
 - cd Insurity-Telematics
+2. Create and activate a virtual environment
+  macOS / Linux
 - python3 -m venv venv 
 - source venv/bin/activate
-# .\venv\Scripts\Activate.ps1
+  Windows (PowerShell)
+- python -m venv venv
+.\venv\Scripts\Activate.ps1
+3. Install dependencies  
 - pip install -r requirements.txt
 - run python src/ml/simulate.py
 - run python src/ml/train_model.py
