@@ -24,7 +24,7 @@ Proof-of-concept showing how telematics data can drive fairer, usage-based auto 
 - Dynamic premium calculation
 - Deterministic outputs (no random noise)
 
-## Run Loacally
+## Run Locally
 
 - git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
 - cd Insurity-Telematics
