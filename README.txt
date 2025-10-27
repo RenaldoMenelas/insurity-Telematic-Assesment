@@ -27,6 +27,12 @@ Setup & Run Instructions:
 6. Start backend API:
    uvicorn src.api.app:app --reload
 
+💡 Note:
+You only need to activate the environment once per terminal session.
+If you open a new terminal (for example, to run Streamlit or FastAPI),
+run the source venv/bin/activate (or Windows equivalent) again —
+unless you’re using a split terminal in VS Code, which often keeps the same environment active automatically.
+
 7. Open a new terminal (reactivate venv) and launch Streamlit UI:
    streamlit run src/ui/app_streamlit.py
 
