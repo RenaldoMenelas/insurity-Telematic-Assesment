@@ -1,31 +1,49 @@
-Setup Instructions
-1. git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
-2. cd insurity-Telematic-Assesment (make sure yuor in root of the insurity-Telematic-Assesment file)
+Public Repository:
+https://github.com/RenaldoMenelas/insurity-Telematic-Assesment
 
-Run these in terminal
-       |
-       V   ( macOS / Linux)        Windows (PowerShell)
-python3 -m venv venv                 python -m venv venv
-source venv/bin/activate             \venv\Scripts\Activate.ps1
-       |
-       V 
-pip install -r requirements.txt
-       |
-       V
-mkdir data
-       |
-       V 
-python src/ml/simulate.py
-python src/ml/train_model.py
-       |
-       V
-uvicorn src.api.app:app --reload
-       |
-       V   (open a new terminal within same folder and run this activate env)
-source venv/bin/activate
-       |        
-       V
-streamlit run src/ui/app_streamlit.py
+Setup & Run Instructions:
+1. Clone the repository:
+   git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
+   cd insurity-Telematic-Assesment
+
+2. Create and activate a virtual environment:
+   macOS / Linux:
+      python3 -m venv venv
+      source venv/bin/activate
+   Windows (PowerShell):
+      python -m venv venv
+      .\venv\Scripts\Activate.ps1
+
+3. Install dependencies:
+   pip install -r requirements.txt
+
+4. Create data folder (if missing):
+   mkdir data
+
+5. Generate simulated data and train model:
+   python src/ml/simulate.py
+   python src/ml/train_model.py
+
+6. Start backend API:
+   uvicorn src.api.app:app --reload
+
+7. Open a new terminal (reactivate venv) and launch Streamlit UI:
+   streamlit run src/ui/app_streamlit.py
+
+Evaluation Steps:
+- Open http://127.0.0.1:8501 to view the dashboard.
+- Adjust average speed, harsh brakes, and night drive toggles.
+- Observe the calculated risk score and dynamic premium.
+
+Notes:
+- Model: Linear Regression with non-negative weights.
+- Data: Simulated telematics trips (avg_speed, harsh_brakes, night_drive, distance_miles).
+- Output: Risk score scaled from 0–100 and converted to insurance premium using corridor logic.
+- Tools used: FastAPI, Streamlit, scikit-learn, pandas, numpy.
+- Future improvement: Incorporate GPS-based regional risk modifiers (city/state).
+
+Author: Renaldo Menelas
+
 
 
       
