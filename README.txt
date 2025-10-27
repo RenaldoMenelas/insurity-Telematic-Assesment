@@ -4,7 +4,7 @@ https://github.com/RenaldoMenelas/insurity-Telematic-Assesment
 Setup & Run Instructions:
 1. Clone the repository:
    git clone https://github.com/RenaldoMenelas/insurity-Telematic-Assesment.git
-   cd insurity-Telematic-Assesment
+   cd insurity-Telematic-Assesment (if not already inside)
 
 2. Create and activate a virtual environment:
    macOS / Linux:
